@@ -1,9 +1,9 @@
 {
   "name": "com.bears.bearessentials",
   "displayName": "Kon's Unity Bear Essentials Package",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "unity": "2022.3",
   "description": "Kon's Unity Bear Essentials Package",
-  "timestamp": 1732559037410,
-  "timestamp_readable": "Mon, 25 Nov 2024 18:23:57 GMT"
+  "timestamp": 1732567439531,
+  "timestamp_readable": "Mon, 25 Nov 2024 20:43:59 GMT"
 }
