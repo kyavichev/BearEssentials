@@ -2,49 +2,29 @@
 const fs = require ( 'fs-extra' );
 
 
-class PackageVersionReader
+async function readPackageVersion()
 {
-	constructor ()
+	 const packageJsonPath = './Assets/package.json';
+
+	if ( fs.existsSync( packageJsonPath ) )
 	{
-		this.versionNotFound = "0.0.-1";
-	}
+		// Read the package file
+		let packageFileString = fs.readFileSync( packageJsonPath, 'utf8' );
+		let packageFileJSON = JSON.parse( packageFileString );
 
-
-	async readPackageVersion()
-	{
-		 const packageJsonPath = './Assets/package.json';
-
-		if ( fs.existsSync( packageJsonPath ) )
-		{
-			// Read the package file
-			let packageFileString = fs.readFileSync( packageJsonPath, 'utf8' );
-			let packageFileJSON = JSON.parse( packageFileString );
-
-			// Version
-			let version = packageFileJSON["version"];
-			return version;
-		}
-
-		return this.versionNotFound;
-	}
-
-
-
-	async do ()
-	{
-		const version = await this.readPackageVersion();
+		// Version
+		let version = packageFileJSON["version"];
 		return version;
 	}
+
+	return "0.0.-1"; // Version Not Found;
 }
 
 
 (async () => 
 {
-	const versionReader = new PackageVersionReader();
-    const version = await versionReader.do();
+    const version = await readPackageVersion();
 
     console.log(version);
-})();
-
-
-
+}
+)();
