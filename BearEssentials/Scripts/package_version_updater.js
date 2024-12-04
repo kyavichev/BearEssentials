@@ -41,7 +41,7 @@ async function updatePackageData()
 
 (async () => 
 {
-    console.log("Updating Kon's Unity Bear Essentials package.json");
+    console.log("Updating Kons Unity Bear Essentials package.json");
     await updatePackageData();
 }
 )();
