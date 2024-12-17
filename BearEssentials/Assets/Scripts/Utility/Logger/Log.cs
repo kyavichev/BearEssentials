@@ -73,6 +73,15 @@ namespace Bears.Core
         /// <param name="message">>Message string</param>
         public static void Msg(LogLevel level, string channel, string message) => _Game.Msg(level, channel, message);
 
+        /// <summary>
+        /// Logs a message in the Unity Console
+        /// </summary>
+        /// <param name="level">Log Level</param>
+        /// <param name="channel">Channel to log to</param>
+        /// <param name="className">>Name of the class that is logging a message</param>
+        /// <param name="message">>Message string</param>
+        public static void Msg(LogLevel level, string channel, string className, string message) => _Game.Msg(level, channel, $"{className} :: {message}");
+
         #endregion // Leveled overrides
 
         #region Convenience overrides
@@ -93,11 +102,10 @@ namespace Bears.Core
         /// <summary>
         /// Logs a message in the Unity Console
         /// </summary>
-        /// <param name="level">Log Level</param>
         /// <param name="channel">Channel to log to</param>
         /// <param name="className">>Name of the class that is logging a message</param>
         /// <param name="message">>Message string</param>
-        public static void Msg(LogLevel level, string channel, string className, string message) => _Game.Msg(level, channel, $"{className} :: {message}");
+        public static void Msg(string channel, string className, string message) => _Game.Msg(channel, $"{className} :: {message}");
 
 
         /// <summary>
