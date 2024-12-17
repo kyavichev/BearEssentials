@@ -90,6 +90,15 @@ namespace Bears.Core
         /// <param name="message">Message to log</param>
         public static void Msg(string message) => _Game.Msg(message);
 
+        /// <summary>
+        /// Logs a message in the Unity Console
+        /// </summary>
+        /// <param name="level">Log Level</param>
+        /// <param name="channel">Channel to log to</param>
+        /// <param name="className">>Name of the class that is logging a message</param>
+        /// <param name="message">>Message string</param>
+        public static void Msg(LogLevel level, string channel, string className, string message) => _Game.Msg(level, channel, $"{className} :: {message}");
+
 
         /// <summary>
         /// Logs a message in the Unity console at the warning level
