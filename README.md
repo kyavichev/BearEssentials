@@ -10,5 +10,6 @@
 ## Using Versioned URL
 While it is fine to use the above the URL, it is unclear when Unity will check if there is an update for this package, so I prefer to use a versioned URL:
 ```json
-  "com.bears.bearessentials": "https://github.com/kyavichev/BearEssentials.git?path=/BearEssentials/Assets#bear-essentials-1.0.14",
+  "com.bears.bearessentials": "https://github.com/kyavichev/BearEssentials.git?path=/BearEssentials/Assets#bear-essentials-1.0.17",
 ```
+You can look at the latest tags to see what is the latest version. Highly recommend using the latest if you are just starting on a new project.
